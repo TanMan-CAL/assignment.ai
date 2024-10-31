@@ -4,7 +4,7 @@ const reportWebVitals = onPerfEntry => {
       getCLS(onPerfEntry);
       getFID(onPerfEntry);
       getFCP(onPerfEntry);
-      getLCP(onPerfEntry);
+      getLCP(onPerfEntry); // error 404 maybe
       getTTFB(onPerfEntry);
     });
   }

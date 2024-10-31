@@ -14,9 +14,9 @@ function FileUpload() {
     if (selectedFile && selectedFile.type === 'application/pdf') {
       setLoading(true);
       setFile(selectedFile);
-      setDownloadUrl(''); // Reset download URL
+      setDownloadUrl(''); 
 
-      let totalChunks = 100; // Simulated total chunks
+      let totalChunks = 100; 
 
       // Simulating file processing with setInterval
       const interval = setInterval(() => {
@@ -24,7 +24,7 @@ function FileUpload() {
           if (oldProgress === totalChunks) {
             clearInterval(interval);
             setLoading(false);
-            return 0; // Reset progress
+            return 0; 
           }
           return Math.min(oldProgress + 10, totalChunks);
         });
