@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 function FileUpload() {
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState(null); 
   const [downloadUrl, setDownloadUrl] = useState('');
 
   const handleFileChange = async (event) => {
