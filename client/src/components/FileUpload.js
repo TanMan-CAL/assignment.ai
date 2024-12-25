@@ -18,7 +18,6 @@ function FileUpload() {
 
       let totalChunks = 100; 
 
-      // Simulating file processing with setInterval
       const interval = setInterval(() => {
         setProgress((oldProgress) => {
           if (oldProgress === totalChunks) {
@@ -30,10 +29,8 @@ function FileUpload() {
         });
       }, 100); // Adjust time interval as necessary
 
-      // Simulate processing the file (this is where you would normally process the PDF)
       await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate processing time
 
-      // Create a download URL for the processed file (same file in this case)
       const url = URL.createObjectURL(selectedFile);
       setDownloadUrl(url);
     } else {
@@ -54,7 +51,7 @@ function FileUpload() {
       </label>
       <p className="text-gray-500 mt-2">Drag and drop your file here or click to upload.</p>
 
-      {/* Display loading bar */}
+      {/* display loading bar */}
       {loading && (
         <div className="w-full max-w-md mt-4">
           <div className="bg-gray-300 h-2 rounded-full">
@@ -67,7 +64,7 @@ function FileUpload() {
         </div>
       )}
 
-      {/* Provide a download link after processing */}
+      {/* provide a download link after processing */}
       {downloadUrl && !loading && (
         <a 
           href={downloadUrl} 
