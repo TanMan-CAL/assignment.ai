@@ -22,7 +22,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
     return res.status(400).send("No file uploaded.");
   }
 
-  const processedFilePath = `processed/${req.file.filename}`;
+  const processedFilePath = `processed/${req.file.filename}`; // need to create an alt path for no file and show default processing example
   fs.copyFile(req.file.path, processedFilePath, (err) => {
     if (err) {
       return res.status(500).send("Error processing file.");
